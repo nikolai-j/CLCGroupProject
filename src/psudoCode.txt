@@ -1,0 +1,17 @@
+TomcatConfig
+-modify max locale count
+
+GameController
+direct to home, all games, add game, edit, save and delete
+
+GameService
+logging with functions for business logic, get all games, get games by id, save game, delete game.
+
+GameRepository
+db operations for findall, findbyid, save, verifies if game exists, deletes game by id
+
+Game
+Defines the game class and its fields and validators
+
+ClcProjectApplication
+runs springboot app
