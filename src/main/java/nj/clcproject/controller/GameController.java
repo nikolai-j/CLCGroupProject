@@ -95,8 +95,7 @@ public class GameController {
             return "game-form";
         }
 
-        // Prevent form submissions from modifying an
-        // existing record unless it already exists.
+        // Prevent form submissions from modifying an existing record unless it already exists.
         if (game.getId() != null) {
             try {
                 gameService.getGameById(game.getId());
