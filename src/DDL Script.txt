@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS gamestore;
+
+USE gamestore;
+
+CREATE TABLE IF NOT EXISTS games (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    game_system VARCHAR(255) NOT NULL,
+    quantity INT NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+
+    PRIMARY KEY (id),
+
+    CONSTRAINT chk_quantity CHECK (quantity >= 0),
+    CONSTRAINT chk_price CHECK (price >= 0)
+);
